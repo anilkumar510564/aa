@@ -1,0 +1,35 @@
+Modules
+
+update,delete,add – Automated
+Filter and Sorting – Automated
+Upgrading – Automated
+Bulk ordering – Manual
+Security Deposit – Manual
+Feedback – Manual
+Premium Membership – Manual
+Permanent Buying – Manual
+Product Suggestions – Automated
+Notifications – Automated
+Renewal - Manual
+
+Integration
+
+Filter and Sorting - Product Suggestions - Automated(top down)
+Bulk Ordering- update/delete/add - Big Bang
+(manual)          (automated)
+Security Deposit-Premium Membership-->Renewal - Manual(top Down / Sandwich)
+upgrading - update/delete/add-->Notification - Automated(top down)
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+	
