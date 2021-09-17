@@ -1,0 +1,74 @@
+1) find method helps to find the record of the provided condtion and limit function helps to limit to the given number.
+
+2) a) gte
+db.studentinfo.find({"class":{$gte:"4"}}).pretty()
+{
+        "_id" : ObjectId("614427e9fc0e5bb89d277812"),
+        "name" : "anil",
+        "class" : "4",
+        "section" : "Rr",
+        "address" : "xyzcc"
+}
+
+b) gt
+db.studentinfo.find({"class":{$gt:"2"}}).pretty()
+{
+        "_id" : ObjectId("614427c3fc0e5bb89d277811"),
+        "name" : "kumar",
+        "class" : "3",
+        "section" : "c",
+        "address" : "abc"
+}
+{
+        "_id" : ObjectId("614427e9fc0e5bb89d277812"),
+        "name" : "anil",
+        "class" : "4",
+        "section" : "Rr",
+        "address" : "xyzcc"
+}
+
+c) lt
+db.studentinfo.find({"class":{$lt:"4"}}).pretty()
+{
+        "_id" : ObjectId("614427c3fc0e5bb89d277811"),
+        "name" : "kumar",
+        "class" : "3",
+        "section" : "c",
+        "address" : "abc"
+}
+
+d) lte
+ db.studentinfo.find({"class":{$lte:"3"}}).pretty()
+{
+        "_id" : ObjectId("614427c3fc0e5bb89d277811"),
+        "name" : "kumar",
+        "class" : "3",
+        "section" : "c",
+        "address" : "abc"
+}
+
+e) ne
+db.studentinfo.find({"class":{$ne:"3"}}).pretty()
+{ "_id" : ObjectId("614427c3fc0e5bb89d277810"), "name" : "vinuuu" }
+{
+        "_id" : ObjectId("614427e9fc0e5bb89d277812"),
+        "name" : "anil",
+        "class" : "4",
+        "section" : "Rr",
+        "address" : "xyzcc"
+}
+
+3)
+ db.studentinfo.find({},{_id:0}).sort({"class":1,"Section":1}).limit(1)
+
+4) it counts total number of records present in the collection
+db.studentinfo.count()
+3
+
+5)if we update a record withour giving all fields then that row will get deleted.
+
+6)it throws uncaought exception
+
+7)operation that creates a new document when no document matches the query criteria.
+
+8)When you execute an update() with upsert: true and the query matches no existing document, MongoDB will refuse to insert a new document if the query specifies conditions on the _id field using dot notation. Contains only update operator expressions.
