@@ -1,0 +1,25 @@
+table{
+font-family:verdana;
+background-color:white;
+}
+body {
+  background-color: white;
+background-image:url("https://www.fool.co.uk/mywallethero/wp-content/uploads/sites/10/2020/05/railroad-with-nature-background1.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+}
+h3 {
+  color: navy;
+  margin-left: 20px;
+  font-size:25px;
+}
+b{
+color:red;}
+u{
+color:navy;}
+#marquee {
+marquee-direction:right;
+marquee-speed:fast;
+color:red;
+font-size:20px;
+}
