@@ -1,0 +1,30 @@
+package com.torryharris.demo.service;
+
+import com.torryharris.demo.exception.DepartmentNotFoundException;
+import com.torryharris.demo.model.Department;
+import com.torryharris.demo.repository.DepartmentRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DepartmentService {
+    @Autowired
+    DepartmentRepository departmentRepository;
+    private final Logger LOG = LoggerFactory.getLogger(this.getClass());
+
+    public Department addDepart(Department department)  {
+        LOG.info("adddept");
+        if (!departmentRepository.existsById(department.getDepartmentId())) {
+
+            return departmentRepository.save(department);
+			/*else if (departmentRepository.existsById(emp.getDepartment().getDepartmentId()))
+				return employeeRepository.save(emp);*/
+        }
+        else
+            throw new DepartmentNotFoundException();
+
+
+    }
+}
